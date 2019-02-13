@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="center|center_vertical"
+                android:textColor="@color/colorTvTx"
+                android:text="CLASE DE ILUMINACION VEHICULAR" />
+
+
+
+
+            <Spinner
+                android:id="@+id/clase_iluminacion_vehicular"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:singleLine="true"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView3"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="TRAMO "/>
+
+
+
+            <EditText
+                android:id="@+id/tramo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:singleLine="true"
+                android:background="@color/colorET"
+                android:hint="Ingrese el tramo"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView4"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="DIRECCION L1" />
+
+
+
+            <EditText
+                android:id="@+id/direccion_l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorET"
+                android:hint="Ingrese la direccion de L1"
+                android:gravity="center|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView5"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="DIRECCION L2" />
+
+
+
+            <EditText
+                android:id="@+id/direccion_l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:hint="Ingrese la direccion de L2"
+                android:gravity="center|center_vertical"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView6"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="BARRIO" />
+
+            <EditText
+                android:id="@+id/barrio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:hint="Ingrese el barrio"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView7"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="LUXOMETRO" />
+
+            <EditText
+                android:id="@+id/luxometro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:hint="Ingrese la referencia del luxometro" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView8"
+                android:layout_width="94dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="CONDICION ATMOSFERICA" />
+
+
+
+
+            <Spinner
+                android:id="@+id/condicion_atmosferica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+
+                android:layout_marginLeft="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView9"
+                android:layout_width="93dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="ORIENTACION LUMINARIA L1" />
+
+
+            <Spinner
+                android:id="@+id/orientacion_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+
+                android:layout_marginLeft="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView10"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="center|center_vertical"
+                android:text="POTENCIA BOMBILLA L1 (W)" />
+
+            <EditText
+                android:id="@+id/potencia_bombilla_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:hint="Ingrese la potencia"
+                android:inputType="number"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView11"
+                android:layout_width="91dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="center|center_vertical"
+                android:text="TIPO DE BOMBILLA L1" />
+
+
+            <Spinner
+                android:id="@+id/tipo_bombilla_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView12"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="TIPO DE APOYO L1" />
+
+
+            <Spinner
+                android:id="@+id/tipo_apoyo_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView13"
+                android:layout_width="91dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="LONGITUD POSTE L1" />
+
+
+            <Spinner
+                android:id="@+id/longitud_poste_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView14"
+                android:layout_width="93dp"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="AVANCE DE LA LUMINARIA (M)" />
+
+
+            <EditText
+                android:id="@+id/avance_sobre_calzada_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese el avance" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView15"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="center|center_vertical"
+                android:text="DISTANCIA AL BORDE DE LA CALZADA (M)" />
+
+            <EditText
+                android:id="@+id/distancia_l1_borde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese la distancia"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView16"
+                android:layout_width="93dp"
+                android:layout_height="40dp"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ALTURA DE MONTAJE (M)" />
+
+
+            <EditText
+                android:id="@+id/altura_montaje_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese altura"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView17"
+                android:layout_width="93dp"
+                android:layout_height="40dp"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ANGULO DE INCLINACION" />
+
+
+            <EditText
+                android:id="@+id/angulo_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese angulo " />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView18"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TENSION NOMINAL L1" />
+
+
+
+
+            <Spinner
+                android:id="@+id/tension_nominal_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView19"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TENSION MEDIDA L1" />
+
+
+            <Spinner
+                android:id="@+id/tension_red_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView20"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ESTADO POR POLUCION" />
+
+
+            <Spinner
+                android:id="@+id/polucion_l1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView21"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ORIENTACION LUMINARIA l2" />
+
+
+            <Spinner
+                android:id="@+id/orientacion_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView22"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="POTENCIA BOMBILLA l2 (W)" />
+
+            <EditText
+                android:id="@+id/potencia_bombilla_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese la potencia"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView23"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TIPO DE BOMBILLA l2" />
+
+
+            <Spinner
+                android:id="@+id/tipo_bombilla_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView24"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TIPO DE APOYO l2" />
+
+
+            <Spinner
+                android:id="@+id/tipo_apoyo_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView25"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="LONGITUD POSTE l2" />
+
+
+            <Spinner
+                android:id="@+id/longitud_poste_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView26"
+                android:layout_width="93dp"
+                android:gravity="left|center_vertical"
+                android:background="@color/colorTv"
+                android:layout_height="fill_parent"
+                android:text="AVANCE DE LA LUMINARIA (M)" />
+
+            <EditText
+                android:id="@+id/avance_sobre_calzada_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese el avance" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView27"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="DISTANCIA AL BORDE DE LA CALZADA (M)" />
+
+            <EditText
+                android:id="@+id/distancia_l2_borde"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese la distancia" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView28"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ALTURA DE MONTAJE (M)" />
+
+            <EditText
+                android:id="@+id/altura_montaje_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese altura"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView29"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ANGULO DE INCLINACION" />
+
+
+            <EditText
+                android:id="@+id/angulo_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese angulo " />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView30"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TENSION NOMINAL l2" />
+
+
+            <Spinner
+                android:id="@+id/tension_nominal_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView31"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TENSION NOMINAL l2" />
+
+
+            <Spinner
+                android:id="@+id/tension_red_l2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView32"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="TENSION NOMINAL l2" />
+
+
+            <Spinner
+                android:id="@+id/polucion_l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:layout_width="132dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="INTERDISTANCIA ENTRE LUMINARIAS" />
+
+            <EditText
+                android:id="@+id/interdistancia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese interdistancia"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView34"
+                android:layout_width="93dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="ANCHO DE LA CALZADA" />
+
+            <EditText
+                android:id="@+id/ancho"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese ancho de la calzada"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center"
+            android:id="@+id/continuar_location_activity"
+            android:text="@string/Next"
+            android:textColor="@color/button_text_background"
+            android:background="@drawable/rounded_button"
+            android:onClick="next_activity_location"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

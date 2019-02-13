@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">LxMtr: Recolección de Datos </string>
+
+    <string name="btn_login">Login</string>
+    <string name="btn_link_signup">Sing up</string>
+
+    <string-array name="tipo_iluminacion_vehicular_lista">
+        <item>M1</item>
+        <item>M2</item>
+        <item>M3</item>
+        <item>M4</item>
+        <item>M5</item>
+
+    </string-array>
+
+    <string name="none_paired">non</string>
+
+
+    <string name="valueLatitude">Latitud</string>
+    <string name="Latitude">Latitud</string>
+    <string name="valueLongitude">Longitud</string>
+    <string name="Longitude">Longitud</string>
+    <string name="Coordinates">Lat/Lon</string>
+    <string name="title_activity_maps">LxMtr: Ubicación</string>
+    <string name="Next">Continuar</string>
+    <string name="user">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="login">Ingresar</string>
+
+    <string name="Punto1">Punto 1</string>
+    <string name="s1">s1</string>
+    <string name="l1">l1</string>
+    <string name="lux_1">Lux 1</string>
+    <string name="GetLux">Valor Lux</string>
+    <string name="Punto2">Punto 2</string>
+    <string name="s2">s2</string>
+    <string name="lux_2">Lux 2</string>
+    <string name="Punto3">Punto 3</string>
+    <string name="s3">s3</string>
+    <string name="lux_3">Lux 3</string>
+    <string name="Punto4">Punto 4</string>
+    <string name="s4">s4</string>
+    <string name="lux_4">Lux 4</string>
+    <string name="Punto5">Punto 5</string>
+    <string name="s5">s5</string>
+    <string name="lux_5">Lux 5</string>
+    <string name="s6">s6</string>
+    <string name="Punto6">Punto 6</string>
+    <string name="lux_6">Lux 6</string>
+    <string name="Punto7">Punto 7</string>
+    <string name="s7">s7</string>
+    <string name="lux_7">Lux 7</string>
+    <string name="Punto8">Punto 8</string>
+    <string name="s8">s8</string>
+    <string name="lux_8">Lux 8</string>
+    <string name="Punto9">Punto 9</string>
+    <string name="s9">s9</string>
+    <string name="lux_9">Lux 9</string>
+    <string name="Punto10">Punto 10</string>
+    <string name="s10">s10</string>
+    <string name="lux_10">Lux 10</string>
+
+
+</resources>

@@ -1,0 +1,696 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SideWalkActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llpuntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_2"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto3"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s3"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_3"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llpuntos2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llpuntos"
+
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto4"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s4"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_4"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto5"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s5"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_5"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto6"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s6"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_6"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llpuntos3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llpuntos2"
+
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto7"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s7"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_7"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto8"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s8"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_8"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/Punto9"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+                    android:background="@color/colorTv"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/s9"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:hint="@string/lux_9"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:background="@color/colorET"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetLux"
+                    android:background="@drawable/rounded_button"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llpuntos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llpuntos3"
+
+
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:divider="?android:dividerVertical"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:id="@+id/tvd10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTv"
+                    android:gravity="center"
+                    android:text="@string/Punto10"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTvTx"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/s10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/colorET"
+                    android:gravity="center"
+                    android:hint="@string/s10"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:textColorHint="@color/Gray" />
+
+                <TextView
+
+                    android:id="@+id/lx10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/colorET"
+                    android:gravity="center"
+                    android:hint="@string/lux_10"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorETTx"
+                    android:textColorHint="@color/Gray" />
+
+                <Button
+                    android:id="@+id/btn_lx10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="@string/GetLux"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_below="@+id/llpuntos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/rounded_button"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/Next"
+            android:onClick="next_activity_op_walk"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

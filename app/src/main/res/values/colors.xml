@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <color name="bg_login">#e9e8e8</color>
+    <color name="button_background">#FFA000</color>
+    <color name="button_text_background">#000000</color>
+    <color name="next_button_background">#FFA000</color>
+
+
+
+
+
+    <color name="Blue">#247fff</color>
+    <color name="White">#ffffff</color>
+    <color name="Gray">#8b8b8b</color>
+    <color name="Black">#000000</color>
+    #FFECB3
+    <color name="colorTv">#FFC107</color>
+    <color name="colorTvTx">#000000</color>
+    <color name="colorET">#FFECB3</color>
+    <color name="colorETTx">#000000</color>
+    <color name="colorBtn">#5c6bc0</color>
+    <!-- <color name="colorBtn">#247fff</color> -->
+
+
+</resources>
