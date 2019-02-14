@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".OpuestoAuxiliarActivity"></activity>
+        <activity android:name=".AdyacenteAuxiliarActivity" />
+        <activity android:name=".NueveAuxiliarActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,37 +35,41 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".LoginActivity"
-            android:label="LxMtr: Inicio de Sesión">
+        <activity
+            android:name=".LoginActivity"
+            android:label="LxMtr: Inicio de Sesión" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".MainActivity"
-            android:label="LxMtr: Inicio">
-
-        </activity>
-        <activity android:name=".FormActivity"
+        <activity
+            android:name=".MainActivity"
+            android:label="LxMtr: Inicio" />
+        <activity
+            android:name=".FormActivity"
             android:label="LxMtr: Recolección de Datos">
 
         </activity>
-        <activity android:name=".MapsActivity"
+        <activity
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".DeviceListActivity"
-            android:label="LxMtr: Conexión"/>
-        <activity android:name=".NinePointsActivity"
-            android:label="LxMtr: Nueve Puntos"/>
-        <activity android:name=".SideWalkActivity"
-            android:label="LxMtr: Anden Adyacente"/>
-        <activity android:name=".OpWalkActivity"
-            android:label="LxMtr: Anden Opuesto"/>
-        <activity android:name=".SumaryActivity"
-            android:label="LxMtr: Resumen">
-        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="LxMtr: Conexión" />
+        <activity
+            android:name=".NinePointsActivity"
+            android:label="LxMtr: Nueve Puntos" />
+        <activity
+            android:name=".SideWalkActivity"
+            android:label="LxMtr: Anden Adyacente" />
+        <activity
+            android:name=".OpWalkActivity"
+            android:label="LxMtr: Anden Opuesto" />
+        <activity
+            android:name=".SumaryActivity"
+            android:label="LxMtr: Resumen" />
         <activity android:name=".TestActivity" />
     </application>
 

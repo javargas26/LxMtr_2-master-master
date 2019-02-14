@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".NinePointsActivity">
+    tools:context=".NueveAuxiliarActivity">
     <RelativeLayout
         android:id="@+id/rlninepoints"
         android:layout_width="match_parent"
@@ -66,7 +66,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_1"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -132,7 +131,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_2"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -192,7 +190,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_3"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -270,7 +267,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_4"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -330,7 +326,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_5"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -390,7 +385,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_6"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -468,7 +462,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_7"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -528,7 +521,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_8"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -588,7 +580,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
                     android:hint="@string/lux_9"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -607,10 +598,35 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/prueba"
+            android:layout_below="@+id/llpuntos3"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:divider="?android:dividerVertical"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="center|center_vertical"
+                android:textColor="@color/colorTvTx"
+                android:text="CLASE DE ILUMINACION VEHICULAR" />
+
+
+
+
+        </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/llpuntos3"
+            android:layout_below="@+id/prueba"
             android:layout_alignParentBottom="true"
 
             android:layout_gravity="center"
@@ -619,7 +635,7 @@
             android:background="@drawable/rounded_button"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:onClick="next_activity_side_walk"
+            android:onClick="next_activity_Adyacente_Auxiliar"
             android:text="@string/Next" />
 
     </RelativeLayout>

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -94,7 +95,7 @@ public class FormActivity extends AppCompatActivity  {
         clase_iluminacion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
+                String item_clase_iluminacion = parent.getItemAtPosition(position).toString();
             }
 
             @Override
@@ -418,7 +419,8 @@ public class FormActivity extends AppCompatActivity  {
     }
 
     public void next_activity_location(View view) {
-        Intent intent= new Intent(FormActivity.this,MapsActivity.class);
+
+
         clase_elegida=clase_iluminacion.getSelectedItem().toString();
         tramo_enviar=tramo.getText().toString();
         direccion_L1_enviar=direccion_L1.getText().toString();
@@ -455,6 +457,9 @@ public class FormActivity extends AppCompatActivity  {
         interdistancia_enviar=interdistancia.getText().toString();
         ancho_enviar=ancho.getText().toString();
 
+        Intent intent= new Intent(FormActivity.this,MapsActivity.class);
+
+
         intent.putExtra("clase_de_iluminacion",clase_elegida);
         intent.putExtra("tramo",tramo_enviar);
         intent.putExtra("direccion_l1",direccion_L1_enviar);
@@ -490,5 +495,10 @@ public class FormActivity extends AppCompatActivity  {
         intent.putExtra("interdistancia", interdistancia_enviar);
         intent.putExtra("ancho_calzada", ancho_enviar);
         startActivity(intent);
+
+
+
+
+
     }
 }
