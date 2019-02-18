@@ -302,12 +302,15 @@ public class SumaryActivity extends AppCompatActivity {
         {
             chNO.setChecked(true);
             chSI.setChecked(false);
+            CUMPLIMIENTO_Holder="El tramo NO cumple  con los niveles de iluminancia estipulados en el RETILAP";
         }
         else
         {
             chSI.setChecked(true);
             chNO.setChecked(false);
+            CUMPLIMIENTO_Holder="El tramo SI cumple  con los niveles de iluminancia estipulados en el RETILAP";
         }
+
 
         //Send
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -479,7 +482,7 @@ public class SumaryActivity extends AppCompatActivity {
         POTENCIA_BOMBILLA_L1_Holder = "potencia l1";
         FUENTE_BOMBILLA_L1_Holder = fuente_l1;
         TIPO_DE_APOYO_L1_Holder = apoyo_l1;
-        LONGITUD_DEL_POSTE_L1_Holder = longitud_l1;
+        LONGITUD_DEL_POSTE_L1_Holder = "8";
         AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L1_Holder = avance_calzada_l1;
         DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L1_Holder = distancia_l1_borde;
         ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L1_Holder = altura_montaje_l1;
@@ -491,7 +494,7 @@ public class SumaryActivity extends AppCompatActivity {
         POTENCIA_BOMBILLA_L2_Holder = "potencia l2";
         FUENTE_BOMBILLA_L2_Holder = fuente_l2;
         TIPO_DE_APOYO_L2_Holder = apoyo_l2;
-        LONGITUD_DEL_POSTE_L2_Holder = longitud_l2;
+        LONGITUD_DEL_POSTE_L2_Holder = "8";
         AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L2_Holder = avance_calzada_l2;
         DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L2_Holder = distancia_l2_borde;
         ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L2_Holder = altura_montaje_l2;
@@ -505,67 +508,67 @@ public class SumaryActivity extends AppCompatActivity {
         NUMERO_DE_SEPARADORES_Holder = "N/A";
         DISPOSICION_DE_LAS_LUMINARIAS_Holder = "N/A" ;
 
-        P_1_Holder = "nueve_uno";
-        P_2_Holder = "nueve_dos";
-        P_3_Holder = "nueve_tres";
-        P_4_Holder = "nueve_cuatro";
-        P_5_Holder = "nueve_cinco";
-        P_6_Holder = "nueve_seis";
-        P_7_Holder = "nueve_siete";
-        P_8_Holder = "nueve_ocho";
-        P_9_Holder = "nueve_nueve";
+        P_1_Holder = nueve_uno;
+        P_2_Holder = nueve_dos;
+        P_3_Holder = nueve_tres;
+        P_4_Holder = nueve_cuatro;
+        P_5_Holder = nueve_cinco;
+        P_6_Holder = nueve_seis;
+        P_7_Holder = nueve_siete;
+        P_8_Holder = nueve_ocho;
+        P_9_Holder = nueve_nueve;
 
-        ADY_1_Holder = "ady_uno";
-        ADY_2_Holder = "ady_dos";
-        ADY_3_Holder = "ady_tres";
-        ADY_4_Holder = "ady_cuatro";
-        ADY_5_Holder = "ady_cinco";
-        ADY_6_Holder = "ady_seis";
-        ADY_7_Holder = "ady_siete";
-        ADY_8_Holder = "ady_ocho";
-        ADY_9_Holder = "ady_nueve";
-        ADY_10_Holder = "ady_diez";
+        ADY_1_Holder = ady_uno;
+        ADY_2_Holder = ady_dos;
+        ADY_3_Holder = ady_tres;
+        ADY_4_Holder = ady_cuatro;
+        ADY_5_Holder = ady_cinco;
+        ADY_6_Holder = ady_seis;
+        ADY_7_Holder = ady_siete;
+        ADY_8_Holder = ady_ocho;
+        ADY_9_Holder = ady_nueve;
+        ADY_10_Holder = ady_diez;
 
-        OP_1_Holder = "op_uno";
-        OP_2_Holder = "op_dos";
-        OP_3_Holder = "op_tres";
-        OP_4_Holder = "op_cuatro";
-        OP_5_Holder = "op_cinco";
-        OP_6_Holder = "op_seis";
-        OP_7_Holder = "op_siete";
-        OP_8_Holder = "op_ocho";
-        OP_9_Holder = "op_nueve";
-        OP_10_Holder = "op_diez";
+        OP_1_Holder = op_uno;
+        OP_2_Holder = op_dos;
+        OP_3_Holder = op_tres;
+        OP_4_Holder = op_cuatro;
+        OP_5_Holder = op_cinco;
+        OP_6_Holder = op_seis;
+        OP_7_Holder = op_siete;
+        OP_8_Holder = op_ocho;
+        OP_9_Holder = op_nueve;
+        OP_10_Holder = op_diez;
 
-        ILUMINANCIA_PROMEDIO_CALZADA_Holder = "ILUMINANCIA_PROMEDIO_CALZADA";
-        ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE_Holder = "ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE";
-        ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO_Holder = "ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO";
-        UNIFORMIDAD_GENERAL_CALZADA_Holder = "UNIFORMIDAD_GENERAL_CALZADA";
-        UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE_Holder = "UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE";
-        UNIFORMIDAD_GENERAL_ANDEN_OPUESTO_Holder = "UNIFORMIDAD_GENERAL_ANDEN_OPUESTO";
-        VALOR_MINIMO_CALZADA_Holder = "VALOR_MINIMO_CALZADA";
-        VALOR_MINIMO_ANDEN_ADYACENTE_Holder = "VALOR_MINIMO_ANDEN_ADYACENTE";
-        VALOR_MINIMO_ANDEN_OPUESTO_Holder = "VALOR_MINIMO_ANDEN_OPUESTO";
-        VALOR_MAXIMO_CALZADA_Holder = "VALOR_MAXIMO_CALZADA";
-        VALOR_MAXIMO_ANDEN_ADYACENTE_Holder = "VALOR_MAXIMO_ANDEN_ADYACENTE";
-        VALOR_MAXIMO_ANDEN_OPUESTO_Holder = "VALOR_MAXIMO_ANDEN_OPUESTO";
-        VALOR_MIN_MAX_CALZADA_Holder ="VALOR_MIN_MAX_CALZADA";
-        VALOR_MIN_MAX_ANDEN_ADYACENTE_Holder = "VALOR_MIN_MAX_ANDEN_ADYACENTE";
-        VALOR_MIN_MAX_ANDEN_OPUESTO_Holder = "VALOR_MIN_MAX_ANDEN_OPUESTO";
-        VALOR_PROMEDIO_MAX_CALZADA_Holder = "VALOR_PROMEDIO_MAX_CALZADA";
-        VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE_Holder ="VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE";
-        VALOR_PROMEDIO_MAX_ANDEN_OPUESTO_Holder = "VALOR_PROMEDIO_MAX_ANDEN_OPUESTO";
-        OBSERVACIONES_Holder = "tv_observaciones.getText().toString()";
-        /*if (OBSERVACIONES_Holder==null)
+        ILUMINANCIA_PROMEDIO_CALZADA_Holder = ILUMINANCIA_PROMEDIO_CALZADA;
+        ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE_Holder = ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE;
+        ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO_Holder = ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO;
+        UNIFORMIDAD_GENERAL_CALZADA_Holder = UNIFORMIDAD_GENERAL_CALZADA;
+        UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE_Holder = UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE;
+        UNIFORMIDAD_GENERAL_ANDEN_OPUESTO_Holder = UNIFORMIDAD_GENERAL_ANDEN_OPUESTO;
+        VALOR_MINIMO_CALZADA_Holder = VALOR_MINIMO_CALZADA;
+        VALOR_MINIMO_ANDEN_ADYACENTE_Holder = VALOR_MINIMO_ANDEN_ADYACENTE;
+        VALOR_MINIMO_ANDEN_OPUESTO_Holder = VALOR_MINIMO_ANDEN_OPUESTO;
+        VALOR_MAXIMO_CALZADA_Holder = VALOR_MAXIMO_CALZADA;
+        VALOR_MAXIMO_ANDEN_ADYACENTE_Holder = VALOR_MAXIMO_ANDEN_ADYACENTE;
+        VALOR_MAXIMO_ANDEN_OPUESTO_Holder = VALOR_MAXIMO_ANDEN_OPUESTO;
+        VALOR_MIN_MAX_CALZADA_Holder = VALOR_MIN_MAX_CALZADA;
+        VALOR_MIN_MAX_ANDEN_ADYACENTE_Holder = VALOR_MIN_MAX_ANDEN_ADYACENTE;
+        VALOR_MIN_MAX_ANDEN_OPUESTO_Holder = VALOR_MIN_MAX_ANDEN_OPUESTO;
+        VALOR_PROMEDIO_MAX_CALZADA_Holder = VALOR_PROMEDIO_MAX_CALZADA;
+        VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE_Holder = VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE;
+        VALOR_PROMEDIO_MAX_ANDEN_OPUESTO_Holder = VALOR_PROMEDIO_MAX_ANDEN_OPUESTO;
+        OBSERVACIONES_Holder = tv_observaciones.getText().toString();
+        if (OBSERVACIONES_Holder.equals(""))
         {
-            OBSERVACIONES_Holder="N/A"";
-        }*/
+            OBSERVACIONES_Holder="N/A";
+        }
 
-        POSIBLE_SOLUCION_Holder="falta";
-        value_Holder = "ILUMINANCIA_PROMEDIO_CALZADA";
-        latitud_Holder = "latitud";
-        longitud_Holder = "longitud";
-        Estado_Holder = "Estado";
+        POSIBLE_SOLUCION_Holder= "falta";
+        value_Holder = ILUMINANCIA_PROMEDIO_CALZADA;
+        latitud_Holder = latitud;
+        longitud_Holder = longitud;
+        Estado_Holder = Estado;
 
 
 

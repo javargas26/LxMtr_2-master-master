@@ -27,7 +27,7 @@
                 android:background="@color/colorTv"
                 android:gravity="center|center_vertical"
                 android:textColor="@color/colorTvTx"
-                android:text="CLASE DE ILUMINACION VEHICULAR" />
+                android:text="ILUMINACION VEHICULAR TIPO" />
 
 
 
