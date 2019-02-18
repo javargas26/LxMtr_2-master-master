@@ -169,7 +169,7 @@ public class DeviceListActivity extends AppCompatActivity {
                 intent.putExtra("orientacion_l1", orientacion_l1);
                 intent.putExtra("fuente_l1",fuente_l1);
                 intent.putExtra("apoyo_l1",apoyo_l1);
-                intent.putExtra("longitd_l1",longitud_l1);
+                intent.putExtra("longitud_l1",longitud_l1);
                 intent.putExtra("avance_calzada_l1",avance_calzada_l1);
                 intent.putExtra("distancia_l1_borde",distancia_l1_borde);
                 intent.putExtra("altura_montaje_l1", altura_montaje_l1);
@@ -181,7 +181,7 @@ public class DeviceListActivity extends AppCompatActivity {
                 intent.putExtra("orientacion_l2", orientacion_l2);
                 intent.putExtra("fuente_l2",fuente_l2);
                 intent.putExtra("apoyo_l2",apoyo_l2);
-                intent.putExtra("longitd_l2",longitud_l2);
+                intent.putExtra("longitud_l2",longitud_l2);
                 intent.putExtra("avance_calzada_l2",avance_calzada_l2);
                 intent.putExtra("distancia_l2_borde",distancia_l2_borde);
                 intent.putExtra("altura_montaje_l2", altura_montaje_l2);

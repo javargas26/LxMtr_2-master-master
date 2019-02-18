@@ -1,8 +1,10 @@
 package com.example.lxmtr_2;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -313,7 +315,7 @@ public class SumaryActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Showing progress dialog at user registration time.
-                progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
+                progressDialog.setMessage("Por favor espere, la información se esta guardando");
                 progressDialog.show();
 
                 // Calling method to get value from EditText.
@@ -326,10 +328,14 @@ public class SumaryActivity extends AppCompatActivity {
                             public void onResponse(String ServerResponse) {
 
                                 // Hiding the progress dialog after all task complete.
-                                progressDialog.dismiss();
-
-                                // Showing response message coming from server.
                                 Toast.makeText(SumaryActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                                String response=ServerResponse;
+                                Log.e("onResponse: ",response );
+                                if (response.equals("Guardado con exito"))
+                                {
+                                    Intent intent = new Intent(SumaryActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                }
                             }
                         },
                         new Response.ErrorListener() {
@@ -351,96 +357,96 @@ public class SumaryActivity extends AppCompatActivity {
 
                         // Adding All values to Params.
                         params.put("RESPONSABLE",RESPONSABLE_Holder);
-                        params.put("CLASE_DE_ILIMUNACION_VEHICULAR",CLASE_DE_ILIMUNACION_VEHICULAR_Holder);
-                        params.put("direccion",direccion_Holder);
-                        params.put("BARRIO",BARRIO_Holder);
-                        params.put("LUXOMETRO_Referencia",LUXOMETRO_Referencia_Holder);
-                        params.put("CONDICIONES_ATMOSFERICAS_DE_LA_NOCHE",CONDICIONES_ATMOSFERICAS_DE_LA_NOCHE_Holder);
-                        params.put("DIRECCION_L1",DIRECCION_L1_Holder);
-                        params.put("DIRECCION_L2",DIRECCION_L2_Holder);
-                        params.put("LUMINARIA_L1",LUMINARIA_L1_Holder);
-                        params.put("POTENCIA_BOMBILLA_L1",POTENCIA_BOMBILLA_L1_Holder);
-                        params.put("FUENTE_BOMBILLA_L1",FUENTE_BOMBILLA_L1_Holder);
-                        params.put("TIPO_DE_APOYO_L1",TIPO_DE_APOYO_L1_Holder);
-                        params.put("LONGITUD_DEL_POSTE_L1",LONGITUD_DEL_POSTE_L1_Holder);
-                        params.put("AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L1",AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L1_Holder);
-                        params.put("DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L1",DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L1_Holder);
-                        params.put("ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L1",ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L1_Holder);
-                        params.put("ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L1",ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L1_Holder);
-                        params.put("TENSION_NOMINAL_DE_LUMINARIA_L1",TENSION_NOMINAL_DE_LUMINARIA_L1_Holder);
-                        params.put("TENSION_MEDIDA_EN_LA_RED_L1",TENSION_MEDIDA_EN_LA_RED_L1_Holder);
-                        params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L1",ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L1_Holder);
-                        params.put("LUMINARIA_L2",LUMINARIA_L2_Holder);
-                        params.put("POTENCIA_BOMBILLA_L2",POTENCIA_BOMBILLA_L2_Holder);
-                        params.put("FUENTE_BOMBILLA_L2",FUENTE_BOMBILLA_L2_Holder);
-                        params.put("TIPO_DE_APOYO_L2",TIPO_DE_APOYO_L2_Holder);
-                        params.put("LONGITUD_DEL_POSTE_L2",LONGITUD_DEL_POSTE_L2_Holder);
-                        params.put("AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L2",AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L2_Holder);
-                        params.put("DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L2",DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L2_Holder);
-                        params.put("ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L2",ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L2_Holder);
-                        params.put("ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L2",ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L2_Holder);
-                        params.put("TENSION_NOMINAL_DE_LUMINARIA_L2",TENSION_NOMINAL_DE_LUMINARIA_L2_Holder);
-                        params.put("TENSION_MEDIDA_EN_LA_RED_L2",TENSION_MEDIDA_EN_LA_RED_L2__Holder);
-                        params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L2",ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L2_Holder);
-                        params.put("INTERDISTANCIA_ENTRE_LUMINARIAS_CONSECUTIVAS",INTERDISTANCIA_ENTRE_LUMINARIAS_CONSECUTIVAS_Holder);
-                        params.put("ANCHO_DE_LA_CALZADA_EN_METROS",ANCHO_DE_LA_CALZADA_EN_METROS_Holder);
-                        params.put("SEPARADOR",SEPARADOR_Holder);
-                        params.put("NUMERO_DE_SEPARADORES",NUMERO_DE_SEPARADORES_Holder);
-                        params.put("DISPOSICION_DE_LAS_LUMINARIAS",DISPOSICION_DE_LAS_LUMINARIAS_Holder);
-                        params.put("PUNTO_1",P_1_Holder);
-                        params.put("PUNTO_2",P_2_Holder);
-                        params.put("PUNTO_3",P_3_Holder);
-                        params.put("PUNTO_4",P_4_Holder);
-                        params.put("PUNTO_5",P_5_Holder);
-                        params.put("PUNTO_6",P_6_Holder);
-                        params.put("PUNTO_7",P_7_Holder);
-                        params.put("PUNTO_8",P_8_Holder);
-                        params.put("PUNTO_9",P_9_Holder);
-                        params.put("ANDEN_ADYACENTE_1",ADY_1_Holder);
-                        params.put("ANDEN_ADYACENTE_2",ADY_2_Holder);
-                        params.put("ANDEN_ADYACENTE_3",ADY_3_Holder);
-                        params.put("ANDEN_ADYACENTE_4",ADY_4_Holder);
-                        params.put("ANDEN_ADYACENTE_5",ADY_5_Holder);
-                        params.put("ANDEN_ADYACENTE_6",ADY_6_Holder);
-                        params.put("ANDEN_ADYACENTE_7",ADY_7_Holder);
-                        params.put("ANDEN_ADYACENTE_8",ADY_8_Holder);
-                        params.put("ANDEN_ADYACENTE_9",ADY_9_Holder);
-                        params.put("ANDEN_ADYACENTE_10",ADY_10_Holder);
-                        params.put("ANDEN_OPUESTO_1",OP_1_Holder);
-                        params.put("ANDEN_OPUESTO_2",OP_2_Holder);
-                        params.put("ANDEN_OPUESTO_3",OP_3_Holder);
-                        params.put("ANDEN_OPUESTO_4",OP_4_Holder);
-                        params.put("ANDEN_OPUESTO_5",OP_5_Holder);
-                        params.put("ANDEN_OPUESTO_6",OP_6_Holder);
-                        params.put("ANDEN_OPUESTO_7",OP_7_Holder);
-                        params.put("ANDEN_OPUESTO_8",OP_8_Holder);
-                        params.put("ANDEN_OPUESTO_9",OP_9_Holder);
-                        params.put("ANDEN_OPUESTO_10",OP_10_Holder);
-                        params.put("ILUMINANCIA_PROMEDIO_CALZADA",ILUMINANCIA_PROMEDIO_CALZADA_Holder);
-                        params.put("ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE",ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE_Holder);
-                        params.put("ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO",ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO_Holder);
-                        params.put("UNIFORMIDAD_GENERAL_CALZADA",UNIFORMIDAD_GENERAL_CALZADA_Holder);
-                        params.put("UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE",UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE_Holder);
-                        params.put("UNIFORMIDAD_GENERAL_ANDEN_OPUESTO",UNIFORMIDAD_GENERAL_ANDEN_OPUESTO_Holder);
-                        params.put("VALOR_MINIMO_CALZADA",VALOR_MAXIMO_CALZADA_Holder);
-                        params.put("VALOR_MINIMO_ANDEN_ADYACENTE",VALOR_MAXIMO_ANDEN_ADYACENTE_Holder);
-                        params.put("VALOR_MINIMO_ANDEN_OPUESTO",VALOR_MAXIMO_ANDEN_OPUESTO_Holder);
-                        params.put("VALOR_MAXIMO_CALZADA",VALOR_MAXIMO_CALZADA_Holder);
-                        params.put("VALOR_MAXIMO_ANDEN_ADYACENTE",VALOR_MAXIMO_ANDEN_ADYACENTE_Holder);
-                        params.put("VALOR_MAXIMO_ANDEN_OPUESTO",VALOR_MAXIMO_ANDEN_OPUESTO_Holder);
-                        params.put("VALOR_MIN_MAX_CALZADA",VALOR_MIN_MAX_CALZADA_Holder);
-                        params.put("VALOR_MIN_MAX_ANDEN_ADYACENTE",VALOR_MINIMO_ANDEN_ADYACENTE_Holder);
-                        params.put("VALOR_MIN_MAX_ANDEN_OPUESTO",VALOR_MIN_MAX_ANDEN_OPUESTO_Holder);
-                        params.put("VALOR_PROMEDIO_MAX_CALZADA",VALOR_PROMEDIO_MAX_CALZADA_Holder);
-                        params.put("VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE",VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE_Holder);
-                        params.put("VALOR_PROMEDIO_MAX_ANDEN_OPUESTO",VALOR_PROMEDIO_MAX_ANDEN_OPUESTO_Holder);
+                        params.put("CLASE_DE_ILIMUNACION_VEHICULAR",clase_de_iluminacion);
+                        params.put("direccion",tramo);
+                        params.put("BARRIO",barrio);
+                        params.put("LUXOMETRO_Referencia",referencia_luxometro);
+                        params.put("CONDICIONES_ATMOSFERICAS_DE_LA_NOCHE",condicion_atmosferica);
+                        params.put("DIRECCION_L1",direccion_l1);
+                        params.put("DIRECCION_L2",direccion_l2);
+                        params.put("LUMINARIA_L1",orientacion_l1);
+                        params.put("POTENCIA_BOMBILLA_L1","potencia_l1_falta");
+                        params.put("FUENTE_BOMBILLA_L1",fuente_l1);
+                        params.put("TIPO_DE_APOYO_L1",apoyo_l1);
+                        params.put("LONGITUD_DEL_POSTE_L1","longitud_l1");
+                        params.put("AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L1",avance_calzada_l1);
+                        params.put("DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L1",distancia_l1_borde);
+                        params.put("ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L1",altura_montaje_l1);
+                        params.put("ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L1",angulo_inclinacion_l1);
+                        params.put("TENSION_NOMINAL_DE_LUMINARIA_L1",tension_nominal_l1);
+                        params.put("TENSION_MEDIDA_EN_LA_RED_L1",tension_medida_l1);
+                        params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L1",polucion_l1);
+                        params.put("LUMINARIA_L2",orientacion_l2);
+                        params.put("POTENCIA_BOMBILLA_L2","potencia_l2_falta");
+                        params.put("FUENTE_BOMBILLA_L2",fuente_l2);
+                        params.put("TIPO_DE_APOYO_L2",apoyo_l2);
+                        params.put("LONGITUD_DEL_POSTE_L2","longitud_l2");
+                        params.put("AVANCE_DE_LA_LUMINARIA_SOBRE_LA_CALZADA_L2",avance_calzada_l2);
+                        params.put("DISTANCIA_DEL_POSTE_AL_BORDE_DE_LA_CALZADA_EN_METROS_L2",distancia_l2_borde);
+                        params.put("ALTURA_DEL_MONTAJE_DE_LA_LUMINARIA_EN_METROS_L2",altura_montaje_l2);
+                        params.put("ANGULO_DE_INCLINACION_DE_LA_LUMINARIA_L2",angulo_inclinacion_l2);
+                        params.put("TENSION_NOMINAL_DE_LUMINARIA_L2",tension_nominal_l2);
+                        params.put("TENSION_MEDIDA_EN_LA_RED_L2",tension_medida_l2);
+                        params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L2",polucion_l2);
+                        params.put("INTERDISTANCIA_ENTRE_LUMINARIAS_CONSECUTIVAS",interdistancia);
+                        params.put("ANCHO_DE_LA_CALZADA_EN_METROS",ancho);
+                        params.put("SEPARADOR","SEPARADOR_Holder");
+                        params.put("NUMERO_DE_SEPARADORES","NUMERO_DE_SEPARADORES_Holder");
+                        params.put("DISPOSICION_DE_LAS_LUMINARIAS","DISPOSICION_DE_LAS_LUMINARIAS_Holder");
+                        params.put("PUNTO_1",nueve_uno);
+                        params.put("PUNTO_2",nueve_dos);
+                        params.put("PUNTO_3",nueve_tres);
+                        params.put("PUNTO_4",nueve_cuatro);
+                        params.put("PUNTO_5",nueve_cinco);
+                        params.put("PUNTO_6",nueve_seis);
+                        params.put("PUNTO_7",nueve_siete);
+                        params.put("PUNTO_8",nueve_ocho);
+                        params.put("PUNTO_9",nueve_nueve);
+                        params.put("ANDEN_ADYACENTE_1",ady_uno);
+                        params.put("ANDEN_ADYACENTE_2",ady_dos);
+                        params.put("ANDEN_ADYACENTE_3",ady_tres);
+                        params.put("ANDEN_ADYACENTE_4",ady_cuatro);
+                        params.put("ANDEN_ADYACENTE_5",ady_cinco);
+                        params.put("ANDEN_ADYACENTE_6",ady_seis);
+                        params.put("ANDEN_ADYACENTE_7",ady_siete);
+                        params.put("ANDEN_ADYACENTE_8",ady_ocho);
+                        params.put("ANDEN_ADYACENTE_9",ady_nueve);
+                        params.put("ANDEN_ADYACENTE_10",ady_diez);
+                        params.put("ANDEN_OPUESTO_1",op_uno);
+                        params.put("ANDEN_OPUESTO_2",op_dos);
+                        params.put("ANDEN_OPUESTO_3",op_tres);
+                        params.put("ANDEN_OPUESTO_4",op_cuatro);
+                        params.put("ANDEN_OPUESTO_5",op_cinco);
+                        params.put("ANDEN_OPUESTO_6",op_seis);
+                        params.put("ANDEN_OPUESTO_7",op_siete);
+                        params.put("ANDEN_OPUESTO_8",op_ocho);
+                        params.put("ANDEN_OPUESTO_9",op_nueve);
+                        params.put("ANDEN_OPUESTO_10",op_diez);
+                        params.put("ILUMINANCIA_PROMEDIO_CALZADA",ILUMINANCIA_PROMEDIO_CALZADA);
+                        params.put("ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE",ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE);
+                        params.put("ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO",ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO);
+                        params.put("UNIFORMIDAD_GENERAL_CALZADA",UNIFORMIDAD_GENERAL_CALZADA);
+                        params.put("UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE",UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE);
+                        params.put("UNIFORMIDAD_GENERAL_ANDEN_OPUESTO",UNIFORMIDAD_GENERAL_ANDEN_OPUESTO);
+                        params.put("VALOR_MINIMO_CALZADA",VALOR_MAXIMO_CALZADA);
+                        params.put("VALOR_MINIMO_ANDEN_ADYACENTE",VALOR_MAXIMO_ANDEN_ADYACENTE);
+                        params.put("VALOR_MINIMO_ANDEN_OPUESTO",VALOR_MAXIMO_ANDEN_OPUESTO);
+                        params.put("VALOR_MAXIMO_CALZADA",VALOR_MAXIMO_CALZADA);
+                        params.put("VALOR_MAXIMO_ANDEN_ADYACENTE",VALOR_MAXIMO_ANDEN_ADYACENTE);
+                        params.put("VALOR_MAXIMO_ANDEN_OPUESTO",VALOR_MAXIMO_ANDEN_OPUESTO);
+                        params.put("VALOR_MIN_MAX_CALZADA",VALOR_MIN_MAX_CALZADA);
+                        params.put("VALOR_MIN_MAX_ANDEN_ADYACENTE",VALOR_MINIMO_ANDEN_ADYACENTE);
+                        params.put("VALOR_MIN_MAX_ANDEN_OPUESTO",VALOR_MIN_MAX_ANDEN_OPUESTO);
+                        params.put("VALOR_PROMEDIO_MAX_CALZADA",VALOR_PROMEDIO_MAX_CALZADA);
+                        params.put("VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE",VALOR_PROMEDIO_MAX_ANDEN_ADYACENTE);
+                        params.put("VALOR_PROMEDIO_MAX_ANDEN_OPUESTO",VALOR_PROMEDIO_MAX_ANDEN_OPUESTO);
                         params.put("OBSERVACIONES",OBSERVACIONES_Holder);
                         params.put("CUMPLIMIENTO",CUMPLIMIENTO_Holder);
-                        params.put("POSIBLE_SOLUCION",POSIBLE_SOLUCION_Holder);
-                        params.put("value",value_Holder);
-                        params.put("latitud",latitud_Holder);
-                        params.put("longitud",longitud_Holder);
-                        params.put("Estado",Estado_Holder);
+                        params.put("POSIBLE_SOLUCION","POSIBLE_SOLUCION");
+                        params.put("value",ILUMINANCIA_PROMEDIO_CALZADA);
+                        params.put("latitud",latitud);
+                        params.put("longitud",longitud);
+                        params.put("Estado",Estado);
                         return params;
                     }
 

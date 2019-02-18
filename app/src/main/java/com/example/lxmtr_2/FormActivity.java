@@ -471,7 +471,7 @@ public class FormActivity extends AppCompatActivity  {
         intent.putExtra("orientacion_l1", orientacion_l1_enviar);
         intent.putExtra("fuente_l1",fuente_l1_enviar);
         intent.putExtra("apoyo_l1",tipo_apoyo_l1_enviar);
-        intent.putExtra("longitd_l1",longitud_l1_enviar);
+        intent.putExtra("longitud_l1",longitud_l1_enviar);
         intent.putExtra("avance_calzada_l1",avance_calzada_l1_enviar);
         intent.putExtra("distancia_l1_borde",distancia_l1_borde_enviar);
         intent.putExtra("altura_montaje_l1", altura_montaje_l1_enviar);
@@ -483,7 +483,7 @@ public class FormActivity extends AppCompatActivity  {
         intent.putExtra("orientacion_l2", orientacion_l2_enviar);
         intent.putExtra("fuente_l2",fuente_l2_enviar);
         intent.putExtra("apoyo_l2",tipo_apoyo_l2_enviar);
-        intent.putExtra("longitd_l2",longitud_l2_enviar);
+        intent.putExtra("longitud_l2",longitud_l2_enviar);
         intent.putExtra("avance_calzada_l2",avance_calzada_l2_enviar);
         intent.putExtra("distancia_l2_borde",distancia_l2_borde_enviar);
         intent.putExtra("altura_montaje_l2", altura_montaje_l2_enviar);

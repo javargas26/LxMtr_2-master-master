@@ -909,13 +909,14 @@
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
 
-            <TextView                android:textColor="@color/colorTvTx"
+            <TextView
+                android:textColor="@color/colorTvTx"
                 android:id="@+id/textView31"
                 android:layout_width="93dp"
                 android:layout_height="fill_parent"
                 android:background="@color/colorTv"
                 android:gravity="left|center_vertical"
-                android:text="TENSION NOMINAL l2" />
+                android:text="TENSION MEDIDA l2" />
 
 
             <Spinner
@@ -939,13 +940,14 @@
             android:orientation="horizontal"
             android:layout_marginTop="10dp">
 
-            <TextView                android:textColor="@color/colorTvTx"
+            <TextView
+                android:textColor="@color/colorTvTx"
                 android:id="@+id/textView32"
                 android:layout_width="93dp"
                 android:layout_height="fill_parent"
                 android:background="@color/colorTv"
                 android:gravity="left|center_vertical"
-                android:text="TENSION NOMINAL l2" />
+                android:text="ESTADO POR POLUCION" />
 
 
             <Spinner

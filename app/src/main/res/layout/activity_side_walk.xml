@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_1"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_2"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -192,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_3"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -270,7 +270,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_4"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -330,7 +330,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_5"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -390,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_6"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -468,7 +468,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_7"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -528,7 +528,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_8"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -588,7 +588,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_9"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"
@@ -662,7 +662,7 @@
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:background="@color/colorET"
                     android:gravity="center"
-                    android:text="40.52"
+
                     android:hint="@string/lux_10"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorETTx"

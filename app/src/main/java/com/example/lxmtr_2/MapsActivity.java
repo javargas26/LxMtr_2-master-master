@@ -317,17 +317,17 @@ public class MapsActivity extends FragmentActivity implements
         double mylon = mMap.getCameraPosition().target.longitude;
         String lat=String.valueOf(mylat);
         String lgn=String.valueOf(mylon);
-        tvValueLatitud.setText(lat);
-        tvValueLongitude.setText(lgn);
+        tvValueLatitud.setText(lgn);
+        tvValueLongitude.setText(lat);
         Log.e("latitud: ", tvValueLatitud.getText().toString());
         Log.e("longitud", tvValueLongitude.getText().toString());
-        Toast.makeText(this, "Please Enable GPS and Internet", Toast.LENGTH_SHORT).show();
+
     }
 
     public void next_activity_nueve_puntos(View view) {
 
-        latitud_enviar=tvValueLatitud.getText().toString();
-        longitud_enviar=tvValueLongitude.getText().toString();
+        latitud_enviar=tvValueLongitude.getText().toString();
+        longitud_enviar=tvValueLatitud.getText().toString();
 
 
         Intent intent= new Intent(MapsActivity.this,DeviceListActivity.class);
@@ -342,7 +342,7 @@ public class MapsActivity extends FragmentActivity implements
         intent.putExtra("orientacion_l1", orientacion_l1);
         intent.putExtra("fuente_l1",fuente_l1);
         intent.putExtra("apoyo_l1",apoyo_l1);
-        intent.putExtra("longitd_l1",longitud_l1);
+        intent.putExtra("longitud_l1",longitud_l1);
         intent.putExtra("avance_calzada_l1",avance_calzada_l1);
         intent.putExtra("distancia_l1_borde",distancia_l1_borde);
         intent.putExtra("altura_montaje_l1", altura_montaje_l1);
@@ -354,7 +354,7 @@ public class MapsActivity extends FragmentActivity implements
         intent.putExtra("orientacion_l2", orientacion_l2);
         intent.putExtra("fuente_l2",fuente_l2);
         intent.putExtra("apoyo_l2",apoyo_l2);
-        intent.putExtra("longitd_l2",longitud_l2);
+        intent.putExtra("longitud_l2",longitud_l2);
         intent.putExtra("avance_calzada_l2",avance_calzada_l2);
         intent.putExtra("distancia_l2_borde",distancia_l2_borde);
         intent.putExtra("altura_montaje_l2", altura_montaje_l2);
