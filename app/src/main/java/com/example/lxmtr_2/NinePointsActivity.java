@@ -552,7 +552,7 @@ public class NinePointsActivity extends AppCompatActivity {
         intent.putExtra("UNIFORMIDAD_GENERAL_CALZADA", UNIFORMIDAD_GENERAL_CALZADA_enviar);
         intent.putExtra("VALOR_MIN_MAX_CALZADA", VALOR_MIN_MAX_CALZADA_enviar);
         intent.putExtra("VALOR_PROMEDIO_MAX_CALZADA", VALOR_PROMEDIO_MAX_CALZADA_enviar);
-        intent.putExtra("Estado", Estado_enviar);
+        intent.putExtra("Estado", Estado);
         intent.putExtra("CUMPLIMIENTO", CUMPLIMIENTO_enviar);
 
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
