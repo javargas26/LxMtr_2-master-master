@@ -59,7 +59,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx1"
                     android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx2"
                     android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx3"
                     android:layout_width="match_parent"
@@ -263,7 +263,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx4"
                     android:layout_width="match_parent"
@@ -323,7 +323,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx5"
                     android:layout_width="match_parent"
@@ -383,7 +383,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx6"
                     android:layout_width="match_parent"
@@ -461,7 +461,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx7"
                     android:layout_width="match_parent"
@@ -521,7 +521,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx8"
                     android:layout_width="match_parent"
@@ -581,7 +581,7 @@
                     android:background="@color/colorET"
                     android:textColorHint="@color/Gray" />
 
-                <TextView
+                <EditText
 
                     android:id="@+id/lx9"
                     android:layout_width="match_parent"

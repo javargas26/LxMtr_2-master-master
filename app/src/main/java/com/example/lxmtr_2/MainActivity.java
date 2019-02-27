@@ -8,15 +8,24 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    String id, nombre, apellido, responsable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Bundle bundle=getIntent().getExtras();
+        nombre= (String) bundle.get("nombre");
+        apellido= (String) bundle.get("apellido");
+        id= (String) bundle.get("id");
+        responsable= id;
+
     }
 
     public void inicioTomaDatos(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, FormActivity.class);
+        intent.putExtra("responsable", responsable);
         startActivity(intent);
     }
 

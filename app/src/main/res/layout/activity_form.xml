@@ -166,12 +166,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <TextView                android:textColor="@color/colorTvTx"
+            <TextView
+                android:textColor="@color/colorTvTx"
                 android:id="@+id/textView7"
                 android:layout_width="91dp"
                 android:gravity="center|center_vertical"
@@ -179,7 +180,7 @@
                 android:layout_height="fill_parent"
                 android:text="LUXOMETRO" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/luxometro"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -187,9 +188,11 @@
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:gravity="center|center_vertical"
-                android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:hint="Ingrese la referencia del luxometro" />
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+
 
         </LinearLayout>
 
@@ -199,7 +202,8 @@
             android:orientation="horizontal"
             android:paddingTop="@dimen/activity_vertical_margin">
 
-            <TextView                android:textColor="@color/colorTvTx"
+            <TextView
+                android:textColor="@color/colorTvTx"
                 android:id="@+id/textView8"
                 android:layout_width="94dp"
                 android:gravity="center|center_vertical"
@@ -218,7 +222,6 @@
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:gravity="center|center_vertical"
-
                 android:layout_marginLeft="10dp"
                 android:background="@android:drawable/btn_dropdown"
                 android:spinnerMode="dropdown"/>
@@ -280,7 +283,7 @@
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
                 android:hint="Ingrese la potencia"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
         </LinearLayout>
@@ -400,7 +403,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese el avance" />
 
@@ -430,7 +433,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese la distancia"/>
 
@@ -461,7 +464,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese altura"
                 />
@@ -493,7 +496,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese angulo " />
 
@@ -645,7 +648,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese la potencia"
                 />
@@ -766,7 +769,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese el avance" />
 
@@ -796,7 +799,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese la distancia" />
 
@@ -835,7 +838,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese altura"
                 />
@@ -867,7 +870,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese angulo " />
 
@@ -982,7 +985,7 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese interdistancia"
                 />
@@ -995,7 +998,8 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <TextView                android:textColor="@color/colorTvTx"
+            <TextView
+                android:textColor="@color/colorTvTx"
                 android:id="@+id/textView34"
                 android:layout_width="93dp"
                 android:layout_height="fill_parent"
@@ -1013,12 +1017,45 @@
                 android:gravity="center|center_vertical"
                 android:background="@color/colorET"
                 android:layout_marginLeft="10dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
                 android:hint="Ingrese ancho de la calzada"
                 />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/colorTvTx"
+                android:id="@+id/textView56"
+                android:layout_width="110dp"
+                android:layout_height="fill_parent"
+                android:background="@color/colorTv"
+                android:gravity="left|center_vertical"
+                android:text="NUMERO DE SEPARADORES" />
+
+            <EditText
+                android:id="@+id/separadores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|center_vertical"
+                android:background="@color/colorET"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="Ingrese separadores"
+                />
+
+        </LinearLayout>
+
 
 
 

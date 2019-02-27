@@ -55,13 +55,17 @@ public class MapsActivity extends FragmentActivity implements
         OnMapReadyCallback,
         LocationListener {
 
+    //Responsable
+    String responsable;
+
     //String informacion
-    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica, interdistancia, ancho;
+    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica,
+            interdistancia, ancho, separador, numero_separadores;
     //String L1
-    String orientacion_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
+    String orientacion_l1,potencia_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
             altura_montaje_l1, angulo_inclinacion_l1, tension_nominal_l1, tension_medida_l1, polucion_l1;
     //String L2
-    String orientacion_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
+    String orientacion_l2,potencia_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
             altura_montaje_l2, angulo_inclinacion_l2, tension_nominal_l2, tension_medida_l2, polucion_l2;
 
     String clase_elegida;
@@ -130,6 +134,9 @@ public class MapsActivity extends FragmentActivity implements
 
         //valores desde la actividad anterior
         Bundle bundle=getIntent().getExtras();
+
+        responsable=(String) bundle.get("responsable");
+
         clase_de_iluminacion= (String) bundle.get("clase_de_iluminacion");
         tramo=(String) bundle.get("tramo");
         direccion_l1=(String) bundle.get("direccion_l1");
@@ -139,6 +146,7 @@ public class MapsActivity extends FragmentActivity implements
         condicion_atmosferica=(String) bundle.get("condicion_atmosferica");
 
         orientacion_l1=(String) bundle.get("orientacion_l1");
+        potencia_l1=(String) bundle.get("potencia_l1");
         fuente_l1=(String) bundle.get("fuente_l1");
         apoyo_l1=(String) bundle.get("apoyo_l1");
         longitud_l1=(String) bundle.get("longitud_l1");
@@ -151,6 +159,7 @@ public class MapsActivity extends FragmentActivity implements
         polucion_l1=(String) bundle.get("polucion_l1");
 
         orientacion_l2=(String) bundle.get("orientacion_l2");
+        potencia_l2=(String) bundle.get("potencia_l2");
         fuente_l2=(String) bundle.get("fuente_l2");
         apoyo_l2=(String) bundle.get("apoyo_l2");
         longitud_l2=(String) bundle.get("longitud_l2");
@@ -164,6 +173,9 @@ public class MapsActivity extends FragmentActivity implements
 
         interdistancia=(String) bundle.get("interdistancia");
         ancho=(String) bundle.get("ancho_calzada");
+
+        separador=(String) bundle.get("separador");
+        numero_separadores=(String) bundle.get("numero_separadores");
 
 
         tvValueLatitud = findViewById(R.id.tvValueLongitude);
@@ -331,6 +343,9 @@ public class MapsActivity extends FragmentActivity implements
 
 
         Intent intent= new Intent(MapsActivity.this,DeviceListActivity.class);
+
+        intent.putExtra("responsable",responsable);
+
         intent.putExtra("clase_de_iluminacion",clase_de_iluminacion);
         intent.putExtra("tramo",tramo);
         intent.putExtra("direccion_l1",direccion_l1);
@@ -340,6 +355,7 @@ public class MapsActivity extends FragmentActivity implements
         intent.putExtra("condicion_atmosferica",condicion_atmosferica);
 
         intent.putExtra("orientacion_l1", orientacion_l1);
+        intent.putExtra("potencia_l1", potencia_l1);
         intent.putExtra("fuente_l1",fuente_l1);
         intent.putExtra("apoyo_l1",apoyo_l1);
         intent.putExtra("longitud_l1",longitud_l1);
@@ -352,6 +368,7 @@ public class MapsActivity extends FragmentActivity implements
         intent.putExtra("polucion_l1", polucion_l1);
 
         intent.putExtra("orientacion_l2", orientacion_l2);
+        intent.putExtra("potencia_l2", potencia_l2);
         intent.putExtra("fuente_l2",fuente_l2);
         intent.putExtra("apoyo_l2",apoyo_l2);
         intent.putExtra("longitud_l2",longitud_l2);
@@ -368,6 +385,9 @@ public class MapsActivity extends FragmentActivity implements
 
         intent.putExtra("latitud", latitud_enviar);
         intent.putExtra("longitud",longitud_enviar);
+
+        intent.putExtra("separador", separador);
+        intent.putExtra("numero_separadores",numero_separadores);
         startActivity(intent);
 
     }

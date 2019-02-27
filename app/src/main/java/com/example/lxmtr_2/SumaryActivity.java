@@ -25,13 +25,17 @@ public class SumaryActivity extends AppCompatActivity {
 
     String url= "https://streetlightdata.000webhostapp.com/write_data.php";
 
+    //Responsable
+    String responsable;
+
     //String informacion
-    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica, interdistancia, ancho;
+    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica,
+            interdistancia, ancho, separador, numero_separadores;
     //String L1
-    String orientacion_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
+    String orientacion_l1,potencia_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
             altura_montaje_l1, angulo_inclinacion_l1, tension_nominal_l1, tension_medida_l1, polucion_l1;
     //String L2
-    String orientacion_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
+    String orientacion_l2,potencia_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
             altura_montaje_l2, angulo_inclinacion_l2, tension_nominal_l2, tension_medida_l2, polucion_l2;
 
     //Coordenadas
@@ -117,6 +121,8 @@ public class SumaryActivity extends AppCompatActivity {
         //valores desde la actividad anterior
         Bundle bundle=getIntent().getExtras();
 
+        responsable= (String) bundle.get("responsable");
+
         clase_de_iluminacion= (String) bundle.get("clase_de_iluminacion");
         tramo=(String) bundle.get("tramo");
         direccion_l1=(String) bundle.get("direccion_l1");
@@ -126,6 +132,8 @@ public class SumaryActivity extends AppCompatActivity {
         condicion_atmosferica=(String) bundle.get("condicion_atmosferica");
 
         orientacion_l1=(String) bundle.get("orientacion_l1");
+        potencia_l1=(String) bundle.get("potencia_l1");
+
         fuente_l1=(String) bundle.get("fuente_l1");
         apoyo_l1=(String) bundle.get("apoyo_l1");
         longitud_l1=(String) bundle.get("longitud_l1");
@@ -138,6 +146,8 @@ public class SumaryActivity extends AppCompatActivity {
         polucion_l1=(String) bundle.get("polucion_l1");
 
         orientacion_l2=(String) bundle.get("orientacion_l2");
+        potencia_l2=(String) bundle.get("potencia_l2");
+
         fuente_l2=(String) bundle.get("fuente_l2");
         apoyo_l2=(String) bundle.get("apoyo_l2");
         longitud_l2=(String) bundle.get("longitud_l2");
@@ -154,6 +164,9 @@ public class SumaryActivity extends AppCompatActivity {
 
         latitud=(String) bundle.get("latitud");
         longitud=(String) bundle.get("longitud");
+
+        separador=(String) bundle.get("separador");
+        numero_separadores=(String) bundle.get("numero_separadores");
 
         nueve_uno=(String)bundle.get("nueve_uno");
         nueve_dos=(String)bundle.get("nueve_dos");
@@ -359,7 +372,7 @@ public class SumaryActivity extends AppCompatActivity {
                         Map<String, String> params = new HashMap<String, String>();
 
                         // Adding All values to Params.
-                        params.put("RESPONSABLE",RESPONSABLE_Holder);
+                        params.put("RESPONSABLE",responsable);
                         params.put("CLASE_DE_ILIMUNACION_VEHICULAR",clase_de_iluminacion);
                         params.put("direccion",tramo);
                         params.put("BARRIO",barrio);
@@ -368,7 +381,7 @@ public class SumaryActivity extends AppCompatActivity {
                         params.put("DIRECCION_L1",direccion_l1);
                         params.put("DIRECCION_L2",direccion_l2);
                         params.put("LUMINARIA_L1",orientacion_l1);
-                        params.put("POTENCIA_BOMBILLA_L1","potencia_l1_falta");
+                        params.put("POTENCIA_BOMBILLA_L1",potencia_l1);
                         params.put("FUENTE_BOMBILLA_L1",fuente_l1);
                         params.put("TIPO_DE_APOYO_L1",apoyo_l1);
                         params.put("LONGITUD_DEL_POSTE_L1","longitud_l1");
@@ -380,7 +393,7 @@ public class SumaryActivity extends AppCompatActivity {
                         params.put("TENSION_MEDIDA_EN_LA_RED_L1",tension_medida_l1);
                         params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L1",polucion_l1);
                         params.put("LUMINARIA_L2",orientacion_l2);
-                        params.put("POTENCIA_BOMBILLA_L2","potencia_l2_falta");
+                        params.put("POTENCIA_BOMBILLA_L2",potencia_l2);
                         params.put("FUENTE_BOMBILLA_L2",fuente_l2);
                         params.put("TIPO_DE_APOYO_L2",apoyo_l2);
                         params.put("LONGITUD_DEL_POSTE_L2","longitud_l2");
@@ -393,8 +406,8 @@ public class SumaryActivity extends AppCompatActivity {
                         params.put("ESTADO_DE_LA_LUMINARIA_POR_POLUSION_L2",polucion_l2);
                         params.put("INTERDISTANCIA_ENTRE_LUMINARIAS_CONSECUTIVAS",interdistancia);
                         params.put("ANCHO_DE_LA_CALZADA_EN_METROS",ancho);
-                        params.put("SEPARADOR","SEPARADOR_Holder");
-                        params.put("NUMERO_DE_SEPARADORES","NUMERO_DE_SEPARADORES_Holder");
+                        params.put("SEPARADOR",separador);
+                        params.put("NUMERO_DE_SEPARADORES",numero_separadores);
                         params.put("DISPOSICION_DE_LAS_LUMINARIAS","DISPOSICION_DE_LAS_LUMINARIAS_Holder");
                         params.put("PUNTO_1",nueve_uno);
                         params.put("PUNTO_2",nueve_dos);
@@ -428,9 +441,9 @@ public class SumaryActivity extends AppCompatActivity {
                         params.put("ILUMINANCIA_PROMEDIO_CALZADA",ILUMINANCIA_PROMEDIO_CALZADA);
                         params.put("ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE",ILUMINANCIA_PROMEDIO_ANDEN_ADYACENTE);
                         params.put("ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO",ILUMINANCIA_PROMEDIO_ANDEN_OPUESTO);
-                        params.put("UNIFORMIDAD_GENERAL_CALZADA",UNIFORMIDAD_GENERAL_CALZADA);
-                        params.put("UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE",UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE);
-                        params.put("UNIFORMIDAD_GENERAL_ANDEN_OPUESTO",UNIFORMIDAD_GENERAL_ANDEN_OPUESTO);
+                        params.put("UNIFORMIDAD_GENERAL_CALZADA",UNIFORMIDAD_GENERAL_CALZADA+"%");
+                        params.put("UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE",UNIFORMIDAD_GENERAL_ANDEN_ADYACENTE+"%");
+                        params.put("UNIFORMIDAD_GENERAL_ANDEN_OPUESTO",UNIFORMIDAD_GENERAL_ANDEN_OPUESTO+"%");
                         params.put("VALOR_MINIMO_CALZADA",VALOR_MAXIMO_CALZADA);
                         params.put("VALOR_MINIMO_ANDEN_ADYACENTE",VALOR_MAXIMO_ANDEN_ADYACENTE);
                         params.put("VALOR_MINIMO_ANDEN_OPUESTO",VALOR_MAXIMO_ANDEN_OPUESTO);

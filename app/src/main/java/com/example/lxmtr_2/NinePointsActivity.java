@@ -47,14 +47,17 @@ public class NinePointsActivity extends AppCompatActivity {
     // String for MAC address
     private static String address = null;
 
+    //Responsable
+    String responsable;
 
     //String informacion
-    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica, interdistancia, ancho;
+    String clase_de_iluminacion, tramo, direccion_l1, direccion_l2, barrio, referencia_luxometro, condicion_atmosferica,
+            interdistancia, ancho, separador, numero_separadores;
     //String L1
-    String orientacion_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
+    String orientacion_l1,potencia_l1, fuente_l1, apoyo_l1, longitud_l1, avance_calzada_l1, distancia_l1_borde,
             altura_montaje_l1, angulo_inclinacion_l1, tension_nominal_l1, tension_medida_l1, polucion_l1;
     //String L2
-    String orientacion_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
+    String orientacion_l2,potencia_l2, fuente_l2, apoyo_l2, longitud_l2, avance_calzada_l2, distancia_l2_borde,
             altura_montaje_l2, angulo_inclinacion_l2, tension_nominal_l2, tension_medida_l2, polucion_l2;
 
     //Coordenadas
@@ -92,6 +95,9 @@ public class NinePointsActivity extends AppCompatActivity {
 
         //valores desde la actividad anterior
         Bundle bundle=getIntent().getExtras();
+
+        responsable= (String) bundle.get("responsable");
+
         clase_de_iluminacion= (String) bundle.get("clase_de_iluminacion");
         tramo=(String) bundle.get("tramo");
         direccion_l1=(String) bundle.get("direccion_l1");
@@ -101,6 +107,8 @@ public class NinePointsActivity extends AppCompatActivity {
         condicion_atmosferica=(String) bundle.get("condicion_atmosferica");
 
         orientacion_l1=(String) bundle.get("orientacion_l1");
+        potencia_l1=(String) bundle.get("potencia_l1");
+
         fuente_l1=(String) bundle.get("fuente_l1");
         apoyo_l1=(String) bundle.get("apoyo_l1");
         longitud_l1=(String) bundle.get("longitud_l1");
@@ -113,6 +121,8 @@ public class NinePointsActivity extends AppCompatActivity {
         polucion_l1=(String) bundle.get("polucion_l1");
 
         orientacion_l2=(String) bundle.get("orientacion_l2");
+        potencia_l2=(String) bundle.get("potencia_l2");
+
         fuente_l2=(String) bundle.get("fuente_l2");
         apoyo_l2=(String) bundle.get("apoyo_l2");
         longitud_l2=(String) bundle.get("longitud_l2");
@@ -129,6 +139,9 @@ public class NinePointsActivity extends AppCompatActivity {
 
         latitud=(String) bundle.get("latitud");
         longitud=(String) bundle.get("longitud");
+
+        separador=(String) bundle.get("separador");
+        numero_separadores=(String) bundle.get("numero_separadores");
 
         //Ubicacion nueve puntos
         s1=findViewById(R.id.s1);
@@ -204,6 +217,14 @@ public class NinePointsActivity extends AppCompatActivity {
                         {
                             String sensor0 = recDataString.substring(1, 6);             //get sensor value from string between indices 1-5
                             //sensorView.setText( sensor0 );    //update the textviews with sensor values
+                            if(sensor0.endsWith("~"))
+                            {
+                                sensor0 = sensor0.substring(0,sensor0.length() - 1);
+                                Log.e( "onCreate: ","~" );
+                                String cero="0";
+                                sensor0=sensor0+cero;
+
+                            }
 
                             if (btn==1)
                             {
@@ -431,7 +452,7 @@ public class NinePointsActivity extends AppCompatActivity {
         }
     }
 
-    public void next_activity_side_walk(View view) {
+    /*public void next_activity_side_walk(View view) {
 
         lx1_enviar=Viewlx1.getText().toString();
         lx2_enviar=Viewlx2.getText().toString();
@@ -563,6 +584,216 @@ public class NinePointsActivity extends AppCompatActivity {
 
 
 
+    }*/
+
+    public void next_activity_side_walk(View view) {
+
+        if (validate())
+        {
+            lx1_enviar=Viewlx1.getText().toString();
+            lx2_enviar=Viewlx2.getText().toString();
+            lx3_enviar=Viewlx3.getText().toString();
+            lx4_enviar=Viewlx4.getText().toString();
+            lx5_enviar=Viewlx5.getText().toString();
+            lx6_enviar=Viewlx6.getText().toString();
+            lx7_enviar=Viewlx7.getText().toString();
+            lx8_enviar=Viewlx8.getText().toString();
+            lx9_enviar=Viewlx9.getText().toString();
+
+            p1 = Float.parseFloat(Viewlx1.getText().toString());
+            p2 = Float.parseFloat(Viewlx2.getText().toString());
+            p3 = Float.parseFloat(Viewlx3.getText().toString());
+            p4 = Float.parseFloat(Viewlx4.getText().toString());
+            p5 = Float.parseFloat(Viewlx5.getText().toString());
+            p6 = Float.parseFloat(Viewlx6.getText().toString());
+            p7 = Float.parseFloat(Viewlx7.getText().toString());
+            p8 = Float.parseFloat(Viewlx8.getText().toString());
+            p9 = Float.parseFloat(Viewlx9.getText().toString());
+
+            prom_calzada=(p1+p2+p3+p4+p5+p6+p7+p8+p9)/9;
+
+            //p1, p2, p3, p4, p5, p6, p7, p8, p9
+
+            List<Float> list = new ArrayList<>();
+            list.add(p1);
+            list.add(p2);
+            list.add(p3);
+            list.add(p4);
+            list.add(p5);
+            list.add(p6);
+            list.add(p7);
+            list.add(p8);
+            list.add(p9);
+            Collections.sort(list);
+
+
+            min_calzada= list.get(0);
+            max_calzada= list.get(8);
+            uni_calzada= min_calzada/prom_calzada;
+            min_max_calzada= min_calzada/max_calzada;
+            prom_max_calzada= prom_calzada/max_calzada;
+
+
+            if (prom_calzada <= 10) {
+                Estado = "Bajo";
+                CUMPLIMIENTO=0;
+            } else if (prom_calzada > 10 && prom_calzada <= 30) {
+                Estado = "Medio";
+                CUMPLIMIENTO=1;
+            } else if (prom_calzada > 30) {
+                Estado = "Aceptable";
+                CUMPLIMIENTO=1;
+            }
+
+            ILUMINANCIA_PROMEDIO_enviar = String.format("%.2f",prom_calzada);
+            MINIMO_CALZADA_enviar= String.format("%.2f",min_calzada);
+            MAXIMO_CALZADA_enviar= String.format("%.2f",max_calzada);
+            UNIFORMIDAD_GENERAL_CALZADA_enviar= String.format("%.2f",uni_calzada);
+            VALOR_MIN_MAX_CALZADA_enviar=String.format("%.2f",min_max_calzada);
+            VALOR_PROMEDIO_MAX_CALZADA_enviar=String.format("%.2f",prom_max_calzada);
+            CUMPLIMIENTO_enviar=String.valueOf(CUMPLIMIENTO);
+
+
+            Intent intent= new Intent(NinePointsActivity.this,SideWalkActivity.class);
+
+            intent.putExtra("responsable",responsable);
+
+            intent.putExtra("clase_de_iluminacion",clase_de_iluminacion);
+            intent.putExtra("tramo",tramo);
+            intent.putExtra("direccion_l1",direccion_l1);
+            intent.putExtra("direccion_l2",direccion_l2);
+            intent.putExtra("barrio",barrio);
+            intent.putExtra("referencia_luxometro",referencia_luxometro);
+            intent.putExtra("condicion_atmosferica",condicion_atmosferica);
+
+            intent.putExtra("orientacion_l1", orientacion_l1);
+            intent.putExtra("potencia_l1", potencia_l1);
+
+            intent.putExtra("fuente_l1",fuente_l1);
+            intent.putExtra("apoyo_l1",apoyo_l1);
+            intent.putExtra("longitud_l1",longitud_l1);
+            intent.putExtra("avance_calzada_l1",avance_calzada_l1);
+            intent.putExtra("distancia_l1_borde",distancia_l1_borde);
+            intent.putExtra("altura_montaje_l1", altura_montaje_l1);
+            intent.putExtra("angulo_inclinacion_l1", angulo_inclinacion_l1);
+            intent.putExtra("tension_nominal_l1", tension_nominal_l1);
+            intent.putExtra("tension_medida_l1",tension_medida_l1);
+            intent.putExtra("polucion_l1", polucion_l1);
+
+            intent.putExtra("orientacion_l2", orientacion_l2);
+            intent.putExtra("potencia_l2", potencia_l2);
+
+            intent.putExtra("fuente_l2",fuente_l2);
+            intent.putExtra("apoyo_l2",apoyo_l2);
+            intent.putExtra("longitud_l2",longitud_l2);
+            intent.putExtra("avance_calzada_l2",avance_calzada_l2);
+            intent.putExtra("distancia_l2_borde",distancia_l2_borde);
+            intent.putExtra("altura_montaje_l2", altura_montaje_l2);
+            intent.putExtra("angulo_inclinacion_l2", angulo_inclinacion_l2);
+            intent.putExtra("tension_nominal_l2", tension_nominal_l2);
+            intent.putExtra("tension_medida_l2",tension_medida_l2);
+            intent.putExtra("polucion_l2", polucion_l2);
+
+            intent.putExtra("interdistancia", interdistancia);
+            intent.putExtra("ancho_calzada", ancho);
+
+            intent.putExtra("latitud", latitud);
+            intent.putExtra("longitud",longitud);
+
+            intent.putExtra("separador", separador);
+            intent.putExtra("numero_separadores",numero_separadores);
+
+            intent.putExtra("nueve_uno", lx1_enviar);
+            intent.putExtra("nueve_dos", lx2_enviar);
+            intent.putExtra("nueve_tres", lx3_enviar);
+            intent.putExtra("nueve_cuatro", lx4_enviar);
+            intent.putExtra("nueve_cinco", lx5_enviar);
+            intent.putExtra("nueve_seis", lx6_enviar);
+            intent.putExtra("nueve_siete", lx7_enviar);
+            intent.putExtra("nueve_ocho", lx8_enviar);
+            intent.putExtra("nueve_nueve", lx9_enviar);
+
+            intent.putExtra("ILUMINANCIA_PROMEDIO", ILUMINANCIA_PROMEDIO_enviar);
+            intent.putExtra("MINIMO_CALZADA", MINIMO_CALZADA_enviar);
+            intent.putExtra("MAXIMO_CALZADA", MAXIMO_CALZADA_enviar);
+            intent.putExtra("UNIFORMIDAD_GENERAL_CALZADA", UNIFORMIDAD_GENERAL_CALZADA_enviar);
+            intent.putExtra("VALOR_MIN_MAX_CALZADA", VALOR_MIN_MAX_CALZADA_enviar);
+            intent.putExtra("VALOR_PROMEDIO_MAX_CALZADA", VALOR_PROMEDIO_MAX_CALZADA_enviar);
+            intent.putExtra("Estado", Estado);
+            intent.putExtra("CUMPLIMIENTO", CUMPLIMIENTO_enviar);
+
+            intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
+
+
+
+            startActivity(intent);
+
+        }
+        else {
+            Toast.makeText(this, "Llene todos los campos antes de continuar", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private boolean validate() {
+
+        lx1_enviar=Viewlx1.getText().toString();
+        lx2_enviar=Viewlx2.getText().toString();
+        lx3_enviar=Viewlx3.getText().toString();
+        lx4_enviar=Viewlx4.getText().toString();
+        lx5_enviar=Viewlx5.getText().toString();
+        lx6_enviar=Viewlx6.getText().toString();
+        lx7_enviar=Viewlx7.getText().toString();
+        lx8_enviar=Viewlx8.getText().toString();
+        lx9_enviar=Viewlx9.getText().toString();
+        if (lx1_enviar.equals(""))
+        {
+            Viewlx1.setError(Viewlx1.getHint());
+            return false;
+        }
+        if (lx2_enviar.equals(""))
+        {
+            Viewlx2.setError(Viewlx2.getHint());
+            return false;
+        }
+        if (lx3_enviar.equals(""))
+        {
+            Viewlx3.setError(Viewlx3.getHint());
+            return false;
+        }
+        if (lx4_enviar.equals(""))
+        {
+            Viewlx4.setError(Viewlx4.getHint());
+            return false;
+        }
+        if (lx5_enviar.equals(""))
+        {
+            Viewlx5.setError(Viewlx5.getHint());
+            return false;
+        }
+        if (lx6_enviar.equals(""))
+        {
+            Viewlx6.setError(Viewlx6.getHint());
+            return false;
+        }
+        if (lx7_enviar.equals(""))
+        {
+            Viewlx7.setError(Viewlx7.getHint());
+            return false;
+        }
+        if (lx8_enviar.equals(""))
+        {
+            Viewlx8.setError(Viewlx8.getHint());
+            return false;
+        }
+        if (lx9_enviar.equals(""))
+        {
+            Viewlx9.setError(Viewlx9.getHint());
+            return false;
+        }
+
+        else{
+            return true;
+        }
     }
 
     //create new class for connect thread

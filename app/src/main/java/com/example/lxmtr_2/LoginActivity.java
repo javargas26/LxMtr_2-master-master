@@ -31,15 +31,16 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final String URL_FOR_LOGIN = "https://streetlightdata.000webhostapp.com/project/android/login.php";
     ProgressDialog progressDialog;
-    private EditText loginInputEmail, loginInputPassword;
+    private EditText loginInputUser, loginInputPassword;
     private Button btnlogin;
+    String user_prueba, password_prueba;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginInputEmail = (EditText) findViewById(R.id.login_input_email);
+        loginInputUser = (EditText) findViewById(R.id.login_input_user);
         loginInputPassword = (EditText) findViewById(R.id.login_input_password);
         btnlogin = (Button) findViewById(R.id.btn_login);
 
@@ -50,15 +51,41 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginUser(loginInputEmail.getText().toString(),
-                        loginInputPassword.getText().toString());
+                if (validate())
+                {
+                    loginUser(loginInputUser.getText().toString(),
+                            loginInputPassword.getText().toString());
+                }else {
+
+                    Toast.makeText(LoginActivity.this, "Llene todos los campos antes de continuar", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
 
     }
 
-    private void loginUser( final String email, final String password) {
+    private boolean validate() {
+
+
+        user_prueba=loginInputUser.getText().toString();
+        password_prueba=loginInputPassword.getText().toString();
+        if (user_prueba.equals(""))
+        {
+            return false;
+        }
+        if (password_prueba.equals(""))
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+
+    }
+
+    private void loginUser( final String user, final String password) {
         // Tag used to cancel the request
         String cancel_req_tag = "login";
         progressDialog.setMessage("Accediendo...");
@@ -79,12 +106,19 @@ public class LoginActivity extends AppCompatActivity {
                     }*/
 
                     if (!error) {
-                        String user = jObj.getJSONObject("user").getString("name");
+                        String id = jObj.getJSONObject("user").getString("id");
+                        String nombre = jObj.getJSONObject("user").getString("Nombre");
+                        String apellido = jObj.getJSONObject("user").getString("Apellido");
+                        Log.e(TAG, nombre+apellido);
                         // Launch User activity
                         Intent intent = new Intent(
                                 LoginActivity.this,
                                 MainActivity.class);
-                        intent.putExtra("username", user);
+                        intent.putExtra("id", id);
+                        intent.putExtra("nombre", nombre);
+                        intent.putExtra("apellido", apellido);
+
+
                         startActivity(intent);
                         finish();
                     } else {
@@ -111,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to login url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("email", email);
+                params.put("user", user);
                 params.put("password", password);
                 return params;
             }
